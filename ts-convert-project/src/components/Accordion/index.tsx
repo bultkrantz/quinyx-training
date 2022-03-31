@@ -21,14 +21,14 @@ const Accordion: FC<AccordionProps> = ({
 
   return (
     <>
-      <input
+      <label
         className={classNames("accordion", {
           accordion_open: open,
         })}
       >
         <input hidden type="checkbox" onClick={handleToggleAccordion} />
         {title}
-      </input>
+      </label>
       <div
         className={classNames("accordion__panel", {
           accordion__panel_open: open,
