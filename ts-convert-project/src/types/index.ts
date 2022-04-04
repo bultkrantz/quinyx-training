@@ -1,8 +1,10 @@
+// GEO
 interface Geo {
   lat: string;
   lng: string;
 }
 
+// Adress
 interface Adress {
   street: string;
   suite: string;
@@ -11,12 +13,14 @@ interface Adress {
   geo: Geo;
 }
 
+// Company
 interface Company {
   name: string;
   catchPhrase: string;
   bs: string;
 }
 
+// User
 export interface User {
   id: number;
   name: string;
@@ -28,6 +32,7 @@ export interface User {
   company: Company;
 }
 
+// Todo
 export interface Todo {
   userId: number;
   id: number;
