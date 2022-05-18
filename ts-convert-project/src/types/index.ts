@@ -1,3 +1,5 @@
+// Create interfaces for each object here, look at the response you get in the browser.
+
 // GEO
 interface Geo {
   lat: string;

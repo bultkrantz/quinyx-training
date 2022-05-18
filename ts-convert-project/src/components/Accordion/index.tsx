@@ -12,7 +12,8 @@ const Accordion: FC<AccordionProps> = ({
   openDefault = false,
   children,
 }) => {
-  const [open, setOpen] = useState(openDefault);
+  // please type the useState, even though not necessary.
+  const [open, setOpen] = useState<boolean>(openDefault);
 
   // No making this easier, use correct type for event, any not allowed
   const handleToggleAccordion = (e: MouseEvent<HTMLInputElement>) => {
