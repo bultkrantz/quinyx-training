@@ -1,5 +1,5 @@
 // Put appropriete return type for this util, any or void not allowed
-const throwError = (error: string): void => {
+const throwError = (error: string): never => {
   throw new Error(error);
 };
 

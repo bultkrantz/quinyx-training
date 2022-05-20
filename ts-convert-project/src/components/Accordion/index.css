@@ -30,7 +30,7 @@
 }
 
 .accordion__panel {
-  padding: 0 18px;
+  padding: 0.5rem;
   background-color: white;
   overflow: hidden;
   max-height: 0;

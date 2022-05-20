@@ -41,3 +41,11 @@ export interface Todo {
   title: string;
   completed: boolean;
 }
+
+// Posts
+export interface Post {
+  body: string;
+  id: number;
+  title: string;
+  userId: number;
+}
