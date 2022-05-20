@@ -1,9 +1,9 @@
 import { useQuery } from "react-query";
-import { Todo } from "../../types";
 import { handleError } from "../../utils";
 
 export const useTodos = () =>
-  useQuery<Todo[], Error | Response>("todos", () =>
+  // useQuery needs to be types here: useQuery<ReturnType, ErrorType> tip: error can be union type
+  useQuery("todos", () =>
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then((response) => response.json())
       .then((todos) => todos)

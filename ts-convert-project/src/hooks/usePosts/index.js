@@ -1,21 +1,20 @@
 import { useQuery } from "react-query";
-import { Post } from "../../types";
 import { handleError } from "../../utils";
 
 // Create a "partial" type (multiple ways possible, use the one most accurate to you)
-type PostPartial = Omit<Post, "userId">;
 
 export const usePosts = () =>
-  // Use proper typing for this dictionary response. Any not allowed.
-  useQuery<Record<number, PostPartial[]>, Error | Response>("posts", () =>
+  // useQuery needs to be types here: useQuery<ReturnType, ErrorType> tip: error can be union type
+  // Use proper typing for this dictionary response. Any not allowed. Tip "utility types"
+  useQuery("posts", () =>
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
       .then((posts) =>
         posts.reduce(
           (
-            // Type this without use of any
-            result: Record<number, PostPartial[]>,
-            { userId, ...post }: Post
+            // Type this without use of any, tip "utility types"
+            result,
+            { userId, ...post }
           ) => {
             if (!result[userId]) {
               result[userId] = [];

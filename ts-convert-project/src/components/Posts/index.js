@@ -1,15 +1,15 @@
 import { usePosts } from "../../hooks/usePosts";
-import { Post, User } from "../../types";
 import Accordion from "../Accordion";
 import List from "../List";
 
-type Props = { user: User };
-type PostPartial = Omit<Post, "userId">;
+// Props for posts
 
-const Posts = ({ user }: Props) => {
+// Create a "partial" type for post here (multiple ways possible, use the one most accurate to you)
+
+const Posts = ({ user }) => {
   const { data: postDictionary = {} } = usePosts();
 
-  const renderPosts = (post: PostPartial) => (
+  const renderPosts = (post) => (
     <div>
       {post.title}
       <strong>{post.body}</strong>

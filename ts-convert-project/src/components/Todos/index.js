@@ -1,15 +1,14 @@
 import React from "react";
 import { useTodos } from "../../hooks/useTodos";
-import { Todo, User } from "../../types";
 import Accordion from "../Accordion";
 import List from "../List";
 
-type Props = { user: User };
+// Props for todos
 
-const Todos = ({ user }: Props) => {
+const Todos = ({ user }) => {
   const { data: todos = [] } = useTodos();
 
-  const renderTodos = (todo: Todo) => (
+  const renderTodos = (todo) => (
     <div>
       {`${todo.title} - status: `}
       <strong>{todo.completed ? "completed" : "in progess"}</strong>

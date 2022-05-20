@@ -1,23 +1,16 @@
 import classNames from "classnames";
-import { FC, MouseEvent, useState } from "react";
+import { useState } from "react";
 import "./index.css";
 
-type AccordionProps = {
-  openDefault?: boolean;
-  title: string;
-};
+//AccordionProps
 
-const Accordion: FC<AccordionProps> = ({
-  title,
-  openDefault = false,
-  children,
-}) => {
+const Accordion = ({ title, openDefault = false, children }) => {
   // please type the useState, even though not necessary.
-  const [open, setOpen] = useState<boolean>(openDefault);
+  const [open, setOpen] = useState(openDefault);
 
   // No making this easier, use correct type for event, any not allowed
-  const handleToggleAccordion = (e: MouseEvent<HTMLInputElement>) => {
-    setOpen(e.currentTarget.checked);
+  const handleToggleAccordion = (event) => {
+    setOpen(event.currentTarget.checked);
   };
 
   return (
