@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, MouseEvent, useState } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import "./index.css";
 
 type AccordionProps = {
@@ -16,7 +16,7 @@ const Accordion: FC<AccordionProps> = ({
   const [open, setOpen] = useState<boolean>(openDefault);
 
   // No making this easier, use correct type for event, any not allowed
-  const handleToggleAccordion = (e: MouseEvent<HTMLInputElement>) => {
+  const handleToggleAccordion = (e: ChangeEvent<HTMLInputElement>) => {
     setOpen(e.currentTarget.checked);
   };
 
@@ -27,7 +27,7 @@ const Accordion: FC<AccordionProps> = ({
           accordion_open: open,
         })}
       >
-        <input hidden type="checkbox" onClick={handleToggleAccordion} />
+        <input hidden type="checkbox" onChange={handleToggleAccordion} />
         {title}
       </label>
       <div
