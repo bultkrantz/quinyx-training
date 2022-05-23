@@ -1,4 +1,4 @@
-// Put appropriete return type for this util, any or void not allowed
+// TS would accept without response type, but for training purpose please put it anyway. Any or void not allowed.
 const throwError = (error) => {
   throw new Error(error);
 };
