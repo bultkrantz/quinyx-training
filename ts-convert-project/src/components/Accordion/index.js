@@ -20,7 +20,7 @@ const Accordion = ({ title, openDefault = false, children }) => {
           accordion_open: open,
         })}
       >
-        <input hidden type="checkbox" onClick={handleToggleAccordion} />
+        <input hidden type="checkbox" onChange={handleToggleAccordion} />
         {title}
       </label>
       <div
