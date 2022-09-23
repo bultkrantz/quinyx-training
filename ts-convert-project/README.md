@@ -44,3 +44,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Folders to convert
+
+### In order of difficulty (start from top)
+
+- [ ]  src/types/index.js
+- [ ]  src/utils/index.js
+- [ ]  src/components/Users/index.js
+- [ ]  src/components/Todos/index.js
+- [ ]  src/hooks/useUsers/index.js
+- [ ]  src/hooks/useTodos/index.js
+- [ ]  src/components/Accordion/index.js
+- [ ]  src/components/List/index.js
+- [ ]  src/components/Posts/index.js
+- [ ]  src/hooks/usePosts/index.js
